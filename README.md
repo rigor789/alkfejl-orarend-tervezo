@@ -29,6 +29,10 @@ A program az orarend információt a http://to.ttk.elte.hu/uj-tanrend oldalról 
     - `GET /auth/register`: Process registration form
     - `POST /auth/register`: Process registration form
 
+# Use Case
+
+![Use Case Diagram](uml/projekt-orarend.png)
+
 # A Csapat
 
 - Gaál Péter
