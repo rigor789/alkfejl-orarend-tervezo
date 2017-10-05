@@ -38,3 +38,30 @@ A program az orarend információt a http://to.ttk.elte.hu/uj-tanrend oldalról 
 - Gaál Péter
 
 - Randjelovic Igor
+
+
+# Table Structure
+
+## Users
+| id | username | password_hash |
+
+## Timetables
+| id | user_id | data |
+
+### data: 
+```json
+{
+    "courses": [
+        { 
+            "name": "AlkFejl",
+            "schedule": "tuesday|10-12",
+            "location": "2.9999"
+        },
+        {
+            "name": "Fonya",
+            "schedule": "friday|14-16",
+            "location": "-1.75"
+        }
+    ]
+}
+```
