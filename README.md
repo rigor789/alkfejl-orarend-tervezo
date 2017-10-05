@@ -4,7 +4,7 @@ A projekt célja, egy olyan webes alkalmazás fejlesztése, amelyben a felhaszn�
 
 A program az orarend információt a http://to.ttk.elte.hu/uj-tanrend oldalról gyűjti össze.
 
-## Routes
+## Application Routes
 
  - `GET / `
      - If the user has a timetable redirect to `/timetable` 
