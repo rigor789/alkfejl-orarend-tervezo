@@ -41,6 +41,9 @@ A program az orarend információt a http://to.ttk.elte.hu/uj-tanrend oldalról 
         - bejelentkezés
         - felhasználók törlése
         - kurzusok törlése
+- Developer (Useless User)
+    - Jogosultságok:
+        - `N/A`
 
 # Use Case
 
