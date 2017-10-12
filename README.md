@@ -33,10 +33,18 @@ A program az orarend információt a http://to.ttk.elte.hu/uj-tanrend oldalról 
 
 ![Use Case Diagram](uml/projekt-orarend.png)
 
-
-# E-K Diagram
+# Table Structure / E-K Diagram
 
 ![E-K Diagram](uml/e-k%20projekt%20orarend.png)
+
+## Users
+| id | username | password_hash |
+
+## Courses
+| id | name | time | course_code |
+
+## User_Course (pivot)
+| user_id | course_id |
 
 # A Csapat
 
@@ -44,29 +52,3 @@ A program az orarend információt a http://to.ttk.elte.hu/uj-tanrend oldalról 
 
 - Randjelovic Igor
 
-
-# Table Structure
-
-## Users
-| id | username | password_hash |
-
-## Timetables
-| id | user_id | data |
-
-### data: 
-```json
-{
-    "courses": [
-        { 
-            "name": "AlkFejl",
-            "schedule": "tuesday|10-12",
-            "location": "2.9999"
-        },
-        {
-            "name": "Fonya",
-            "schedule": "friday|14-16",
-            "location": "-1.75"
-        }
-    ]
-}
-```
