@@ -29,6 +29,19 @@ A program az orarend információt a http://to.ttk.elte.hu/uj-tanrend oldalról 
     - `GET /auth/register`: Process registration form
     - `POST /auth/register`: Process registration form
 
+# User Roles
+
+- User - alapértelmezett
+    - Jogosultságok:
+        - bejelentkezés
+        - kurzus felvétele
+        - órarend nézése
+- Admin
+    - Jogosultságok:
+        - bejelentkezés
+        - felhasználók törlése
+        - kurzusok törlése
+
 # Use Case
 
 ![Use Case Diagram](uml/projekt-orarend.png)
@@ -48,7 +61,6 @@ A program az orarend információt a http://to.ttk.elte.hu/uj-tanrend oldalról 
 
 # A Csapat
 
-- Gaál Péter
-
-- Randjelovic Igor
+- [Gaál Péter](https://github.com/gpeter12)
+- [Randjelovic Igor](https://github.com/rigor789)
 
