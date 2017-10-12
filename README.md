@@ -36,7 +36,7 @@ A program az orarend információt a http://to.ttk.elte.hu/uj-tanrend oldalról 
 
 # E-K Diagram
 
-![E-K Diagram](uml/e-k projekt orarend.png)
+![E-K Diagram](uml/e-k%20projekt%20orarend.png)
 
 # A Csapat
 
