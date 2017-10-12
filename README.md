@@ -33,6 +33,11 @@ A program az orarend információt a http://to.ttk.elte.hu/uj-tanrend oldalról 
 
 ![Use Case Diagram](uml/projekt-orarend.png)
 
+
+# E-K Diagram
+
+![E-K Diagram](uml/e-k projekt orarend.png)
+
 # A Csapat
 
 - Gaál Péter
