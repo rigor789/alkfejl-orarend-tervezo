@@ -10,4 +10,9 @@ public class HomeController {
     public String index() {
         return "index"; // resources/index.html
     }
+
+    @RequestMapping("/welcome")
+    public String welcome() {
+        return "welcome"; // resources/welcome.html
+    }
 }

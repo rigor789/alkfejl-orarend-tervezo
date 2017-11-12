@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Elte Orarend</title>
+</head>
+<body>
+    <h1>Elte Orarend Register</h1>
+
+    <form action="#" th:action="@{/auth/register}" th:object="${user}" method="post">
+        <div id="email">
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="email" th:field="*{email}" />
+        </div>
+        <div id="username">
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="username" th:field="*{username}" />
+        </div>
+        <div id="password">
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="password" th:field="*{password}" />
+        </div>
+
+        <input type="submit" value="Submit!" />
+        <button type="reset">Cancel</button>
+    </form>
+
+    <a href="/auth/login">Login</a>
+</body>
+</html>
