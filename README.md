@@ -80,6 +80,7 @@ alkfejl-orarend-tervezo/
   |  |  |  |-hu.elte.alkfejl.orarend              // Main application Package
   |  |  |  |  |-api                               // API Controllers
   |  |  |  |  |-controller                        // MVC Controllers
+  |  |  |  |  |-model                             // MVC Models
   |  |  |-resources                               // Other resources
   |  |  |  |-static                               // Static Assets
   |  |  |  |-templates                            // Thymleaf templates
