@@ -81,6 +81,7 @@ alkfejl-orarend-tervezo/
   |  |  |  |  |-api                               // API Controllers
   |  |  |  |  |-controller                        // MVC Controllers
   |  |  |  |  |-model                             // MVC Models
+  |  |  |  |  |-repository                        // MVC Repositories
   |  |  |-resources                               // Other resources
   |  |  |  |-static                               // Static Assets
   |  |  |  |-templates                            // Thymleaf templates
