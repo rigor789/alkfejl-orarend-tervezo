@@ -78,6 +78,7 @@ alkfejl-orarend-tervezo/
   |  |-main                                       // The Application Source
   |  |  |-java                                    // The Java Source files
   |  |  |  |-hu.elte.alkfejl.orarend              // Main application Package
+  |  |  |  |  |-api                               // API Controllers
   |  |  |  |  |-controller                        // MVC Controllers
   |  |  |-resources                               // Other resources
   |  |  |  |-static                               // Static Assets
