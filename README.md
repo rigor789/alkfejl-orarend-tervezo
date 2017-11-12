@@ -62,6 +62,32 @@ A program az orarend információt a http://to.ttk.elte.hu/uj-tanrend oldalról 
 ## User_Course (pivot)
 | user_id | course_id |
 
+# Development
+
+- Clone the repository `git clone git@github.com:rigor789/alkfejl-orarend-tervezo.git`
+- Change into the cloned directory `cd alkfejl-orarend-tervezo`
+- Run the project `./mvnw spring-boot:run`
+
+# Project Structure
+
+The project is using the default Spring-Boot directory structure.
+
+```
+alkfejl-orarend-tervezo/
+  |-src                                           // The Java Source
+  |  |-main                                       // The Application Source
+  |  |  |-java                                    // The Java Source files
+  |  |  |  |-hu.elte.alkfejl.orarend              // Main application Package
+  |  |  |  |  |-controller                        // MVC Controllers
+  |  |  |-resources                               // Other resources
+  |  |  |  |-static                               // Static Assets
+  |  |  |  |-templates                            // Thymleaf templates
+  |  |-test                                       // Unit tests
+  |-uml                                           // The source for the uml diagrams
+  
+  (yes this has been hand written c:)
+```
+
 # A Csapat
 
 - [Gaál Péter](https://github.com/gpeter12)
