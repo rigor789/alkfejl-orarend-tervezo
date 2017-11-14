@@ -19,6 +19,8 @@ public class Interval implements Comparable<Interval> {
     }
 
     public Interval(String s) {
+        if(s.equals(""))
+            throw new IllegalArgumentException("Interval String is empty");
         Day d;
         Time t;
         int begh;
@@ -60,13 +62,13 @@ public class Interval implements Comparable<Interval> {
 
     private void validateArguments(Day day, Time starts, int lng) {
         Time t = new Time(starts.getHour(), starts.getMin());
-        /*if (lng < 30 || lng > 180 || t == null) {
+        if (lng < 30 || lng > 240 || t == null) {
             throw new IllegalArgumentException("invalid interval length/time");
-        }*/
+        }
         Time pt = t.add(lng);
-        /*if (pt == null || day.toString() == "") {
+        if (pt == null || day.toString() == "") {
             throw new IllegalArgumentException("invalid day");
-        }*/
+        }
     }
 
     public Day getDay() {return day;}

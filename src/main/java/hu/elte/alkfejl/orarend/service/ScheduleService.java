@@ -35,12 +35,15 @@ public class ScheduleService {
     }
 
     private ArrayList<Course> processTable(String inp) {
-        String first = /*inp.replaceAll("</td><td>","\t").replaceAll("</td></tr><tr><td>","\n").*/inp.replaceAll("</td></tr></table>","").replaceAll("<table><tr><td>","");
+        String first = inp.replaceAll("</td></tr></table>","").replaceAll("<table><tr><td>","");
         String[] lines = first.split("</td></tr><tr><td>");
         ArrayList<Course> courses = new ArrayList<>();
-        for (int i=1; i<lines.length; i++) {
-            courses.add(new Course(lines[i]));
-            System.out.println(courses.get(i-1).toString());
+        for (int i=1; i<lines.length; i++) {//first line dropped
+            try {
+                courses.add(new Course(lines[i]));
+            } catch(IllegalArgumentException ex) {
+                System.err.println(ex.getMessage());
+            }
         }
         return courses;
     }

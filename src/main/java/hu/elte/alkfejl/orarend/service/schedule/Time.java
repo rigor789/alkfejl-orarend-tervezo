@@ -5,8 +5,8 @@ public class Time implements Comparable<Time> {
     private int min;
 
     public Time(int h, int m) {
-        //if(h < 8 || h > 18) {throw new IllegalArgumentException("Time/hour");}
-        //if(m < 0 || m > 59) {throw new IllegalArgumentException("Time/minute");}
+        if(h < 6 || h > 22) {throw new IllegalArgumentException("Time/hour");}
+        if(m < 0 || m > 59) {throw new IllegalArgumentException("Time/minute");}
         hour = h;
         min = m;
     }
