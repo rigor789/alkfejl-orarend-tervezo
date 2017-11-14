@@ -1,7 +1,6 @@
 package hu.elte.alkfejl.orarend.service;
 
 import org.springframework.stereotype.Service;
-import sun.misc.IOUtils;
 
 import java.io.*;
 import java.net.HttpURLConnection;
