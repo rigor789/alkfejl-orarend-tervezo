@@ -1,5 +1,6 @@
 package hu.elte.alkfejl.orarend.api;
 
+import hu.elte.alkfejl.orarend.model.Course;
 import hu.elte.alkfejl.orarend.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -23,12 +24,12 @@ public class SearchApiController {
     }
 
     @GetMapping()
-    public ResponseEntity<Iterable<String>> search(
+    public ResponseEntity<Iterable<Course>> search(
             @RequestParam(value = "filter") String filter,
             @RequestParam(value = "by", defaultValue = "any") String by
     ) {
         try {
-            ArrayList<String> res = this.scheduleService.getByName("adat");
+            ArrayList<Course> res = this.scheduleService.getByName(filter);
 
             return ResponseEntity.ok(res);
 

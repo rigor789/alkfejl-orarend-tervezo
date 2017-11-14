@@ -1,5 +1,6 @@
 package hu.elte.alkfejl.orarend.service;
 
+import hu.elte.alkfejl.orarend.model.Course;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
@@ -16,7 +17,7 @@ public class ScheduleService {
     private final String scheduleEndopoint = "http://to.ttk.elte.hu/test.php";
     private String felev = "2017-2018-1";
 
-    public ArrayList<String> getByName(String name) throws IOException {
+    public ArrayList<Course> getByName(String name) throws IOException {
          StringBuilder sb = new StringBuilder();
 
          sb.append("melyik=nevalapjan");
@@ -30,12 +31,18 @@ public class ScheduleService {
         String result = new BufferedReader(new InputStreamReader(is)).lines()
                 .parallel().collect(Collectors.joining("\n"));
 
+        return this.processTable(result);
+    }
 
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add(result);
-        // Todo: call parser fn with result which will return the array of records
-
-        return arrayList;
+    private ArrayList<Course> processTable(String inp) {
+        String first = /*inp.replaceAll("</td><td>","\t").replaceAll("</td></tr><tr><td>","\n").*/inp.replaceAll("</td></tr></table>","").replaceAll("<table><tr><td>","");
+        String[] lines = first.split("</td></tr><tr><td>");
+        ArrayList<Course> courses = new ArrayList<>();
+        for (int i=1; i<lines.length; i++) {
+            courses.add(new Course(lines[i]));
+            System.out.println(courses.get(i-1).toString());
+        }
+        return courses;
     }
 
     private InputStream getRequest(String endpoint) throws IOException {
