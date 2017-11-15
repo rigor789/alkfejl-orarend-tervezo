@@ -14,9 +14,6 @@ public class Interval implements Comparable<Interval> {
         this.lng = lng;
     }
 
-    public Interval(String s, boolean fromDbString) {
-
-    }
 
     public Interval(String s) {
         if(s.equals(""))
@@ -40,8 +37,8 @@ public class Interval implements Comparable<Interval> {
         else if(splt[0].equals("Péntek"))
             d = Day.FRIDAY;
         else {
-            System.out.println(splt[0]);
-            d = null;
+            d=null;
+            throw new IllegalArgumentException("Interval day is corrupted");
         }
 
         String[] timeplt = splt[1].split("-"); //13:00 -- 14:00
@@ -82,7 +79,7 @@ public class Interval implements Comparable<Interval> {
         sb.append(day.toString())
                 .append(" ")
                 .append(starts.toString())
-                .append(" - ")
+                .append("-")
                 .append(starts.add(lng).toString());
         return sb.toString();
     }
@@ -157,7 +154,7 @@ public class Interval implements Comparable<Interval> {
         public String toString() {
             switch(this) {
                 case MONDAY:
-                    return "Hétfő";
+                    return "Hétfo";
                 case TUESDAY:
                     return "Kedd";
                 case WEDNESDAY:

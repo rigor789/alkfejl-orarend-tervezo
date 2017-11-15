@@ -11,6 +11,6 @@ public class IntervalConverter implements AttributeConverter<Interval, String> {
 
     @Override
     public Interval convertToEntityAttribute(String s) {
-        return new Interval(s, true);
+        return new Interval(s);
     }
 }
