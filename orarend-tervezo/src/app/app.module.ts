@@ -9,13 +9,15 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MaterialDesignModule } from './material-design.module';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
+import { TimetableComponent } from './page/timetable/timetable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    TimetableComponent
   ],
   imports: [
     BrowserModule,

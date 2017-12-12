@@ -1,3 +1,44 @@
-<p>
-  register works!
-</p>
+<div class="page-body" id="register-page">
+  <h2 class="mat-h2">Register</h2>
+  <form [formGroup]="registerForm" novalidate>
+    <div class="form-control">
+      <mat-form-field>
+        <input matInput placeholder="First name" formControlName="fistname">
+        <mat-error *ngIf="fistname.hasError('required')">
+          First name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-control">
+      <mat-form-field>
+        <input matInput placeholder="Last name" formControlName="lastname">
+        <mat-error *ngIf="lastname.hasError('required')">
+          Last name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-control">
+      <mat-form-field>
+        <input matInput placeholder="Username" formControlName="username">
+        <mat-error *ngIf="username.hasError('required')">
+          Username is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-control">
+      <mat-form-field>
+        <input matInput placeholder="Password" formControlName="password">
+        <mat-error *ngIf="password.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button class="mat-primary" (click)="submit()" [disabled]="!loginForm.valid">Register</button>
+  </form>
+
+</div>
+<!-- Valamiért nem úgy viselkedik mint a login page-->
