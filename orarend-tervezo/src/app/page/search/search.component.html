@@ -1,0 +1,68 @@
+<div class="page-body" id="search-page">
+  <h2 class="mat-h2">Search</h2>
+    <div class="form-control">
+      <mat-form-field>
+        <input matInput placeholder="Enter a subject" formControlName="subjectInput">
+      </mat-form-field>
+
+      <button mat-raised-button class="mat-primary" (click)="submit()">Search</button>
+
+      <mat-table #table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name. </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="subjectcode">
+          <mat-header-cell *matHeaderCellDef> Subject code </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.subjectcode}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="coursecode">
+          <mat-header-cell *matHeaderCellDef> Course code </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.coursecode}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="timeinterval">
+          <mat-header-cell *matHeaderCellDef> Time interval </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.timeinterval}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="room">
+          <mat-header-cell *matHeaderCellDef> Room </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.room}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="subjecttipe">
+          <mat-header-cell *matHeaderCellDef> Subject type </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.subjecttipe}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="teachername">
+          <mat-header-cell *matHeaderCellDef> Teacher name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.teachername}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="note">
+          <mat-header-cell *matHeaderCellDef> Note </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.note}} </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+
+
+
+    </div>
+  <mat-form-field>
+    <mat-select placeholder="Favorite food">
+      <mat-option *ngFor="let subject of subjects" [value]="subject.value">
+        {{ subject.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+

@@ -10,6 +10,7 @@ import { MaterialDesignModule } from './material-design.module';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 import { TimetableComponent } from './page/timetable/timetable.component';
+import { SearchComponent } from './page/search/search.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TimetableComponent } from './page/timetable/timetable.component';
     MenuComponent,
     LoginComponent,
     RegisterComponent,
-    TimetableComponent
+    TimetableComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
