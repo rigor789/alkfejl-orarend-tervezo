@@ -2,10 +2,21 @@
   <h2 class="mat-h2">Search</h2>
     <div class="form-control">
       <mat-form-field>
-        <input matInput placeholder="Enter a subject" formControlName="subjectInput">
+        <input matInput placeholder="Enter a subject">
       </mat-form-field>
 
+      <br>
+
+      <mat-form-field>
+        <mat-select [(value)]="selectedSubject" placeholder="Select a subject">
+          <mat-option *ngFor="let subject of subjects" [value]="selectedSubject">{{subject}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <br>
+
       <button mat-raised-button class="mat-primary" (click)="submit()">Search</button>
+      
 
       <mat-table #table [dataSource]="dataSource">
 
@@ -53,16 +64,6 @@
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>
-
-
-
     </div>
-  <mat-form-field>
-    <mat-select placeholder="Favorite food">
-      <mat-option *ngFor="let subject of subjects" [value]="subject.value">
-        {{ subject.viewValue }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
 </div>
 

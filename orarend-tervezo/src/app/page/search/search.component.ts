@@ -8,13 +8,20 @@ import {MatTableDataSource} from '@angular/material';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  dataSource = new MatTableDataSource([
+    {
+      name: 'Analízis 1. EA. (BSc,08',
+      subcetCode: 'dsadélsad',
+      coursecode: '90',
+      timeinterval: 'Hétfő 16:00-18:00',
+      room: 'D-260',
+      subjecttipe: 'Előadás',
+      teachername: 'Gozsák Dávid',
+      note: 'asdélfkjsdléfkj'
+    }
+  
+  ]);
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-export class SubjectSelect {
   subjects = [
     'Analízis 1. EA. (BSc,08',
     'Analízis 1. GY. (BSc,08',
@@ -32,7 +39,7 @@ export class SubjectSelect {
     'Lineáris algebra. EA. (BSc,08',
     'Lineáris algebra. GY. (BSc,08',
     'Valószínűségszámítás és statisztika. EA. (BSc,08',
-    'Valószínűségszámítás és statisztika. GY. (BSc,08' ',
+    'Valószínűségszámítás és statisztika. GY. (BSc,08',
     'Logika és számításelmélet. EA. (BSc,08',
     'Logika és számításelmélet. GY. (BSc,08',
     'Algoritmusok és adatszerkezetek 1. EA. (BSc,08',
@@ -64,4 +71,11 @@ export class SubjectSelect {
     'Adatbázisok 2. EA. (BSc,08',
     'Adatbázisok 2. GY. (BSc,08',
   ];
+
+  selectedSubject = '';
+
+  constructor() { }
+
+  ngOnInit() {
+  }
 }
