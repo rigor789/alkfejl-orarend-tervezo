@@ -9,7 +9,7 @@ export class Server {
   private static protocol: String = 'http';
   private static address: String = 'localhost';
   private static port: String = '4200';
-  private static prefix: String = 'apo';
+  private static prefix: String = 'api';
 
   public static getURLFor(route: String) {
     return `${Server.protocol}://${Server.address}:${Server.port}/${Server.prefix}/${route}`
