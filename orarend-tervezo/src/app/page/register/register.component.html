@@ -4,8 +4,8 @@
   <form [formGroup]="registerForm" novalidate>
     <div class="form-control">
       <mat-form-field>
-        <input matInput placeholder="First name" formControlName="fistname">
-        <mat-error *ngIf="fistname.hasError('required')">
+        <input matInput placeholder="First name" formControlName="firstname">
+        <mat-error *ngIf="firstname.hasError('required')">
           First name is <strong>required</strong>
         </mat-error>
       </mat-form-field>
@@ -38,7 +38,7 @@
       </mat-form-field>
     </div>
 
-    <button mat-raised-button class="mat-primary" (click)="submit()" [disabled]="!loginForm.valid">Register</button>
+    <button mat-raised-button class="mat-primary" (click)="submit()" [disabled]="!registerForm.valid">Register</button>
   </form>
 
 </div>
