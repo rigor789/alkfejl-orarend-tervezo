@@ -1,4 +1,4 @@
-// 8:30 2.em
+// 8:30 2.em eszaki 2.63
 import {Component, OnInit} from '@angular/core';
 import {DataSource} from "@angular/cdk/collections";
 import {Course} from "../../model/Course";
@@ -13,6 +13,7 @@ import * as debounce from "debounce";
 })
 
 export class SearchComponent implements OnInit {
+
   displayedColumns: String[] = [
     'name',
     'subCode',
@@ -24,6 +25,8 @@ export class SearchComponent implements OnInit {
   ];
   dataSource: DataSource<Course> = new CourseDataSource(this.searchService, '');
   subjects = SUBJECTS;
+  filter: String = '';
+
 
   constructor(private searchService: SearchService) {
   }
@@ -31,11 +34,9 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  filter: String = '';
   applyResFilter = debounce((filter) => {
-    console.log('fired');
     this.dataSource = new CourseDataSource(this.searchService, filter)
-  });
+  }, 400);
 
   applyFilter(filter) {
     filter = filter.trim();

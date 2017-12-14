@@ -11,10 +11,12 @@ import {MaterialDesignModule} from './material-design.module';
 import {LoginComponent} from './page/login/login.component';
 import {RegisterComponent} from './page/register/register.component';
 import {TimetableComponent} from './page/timetable/timetable.component';
-import {CourseDataSource, SearchComponent} from './page/search/search.component';
+import {SearchComponent} from './page/search/search.component';
 import {AuthService} from "./service/auth.service";
 import {SearchService} from "./service/search.service";
 import {HttpModule} from "@angular/http";
+import {AuthGuard} from "./guard/auth.guard";
+import { ErrorComponent } from './page/error/error.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import {HttpModule} from "@angular/http";
     RegisterComponent,
     TimetableComponent,
     SearchComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ import {HttpModule} from "@angular/http";
     HttpModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [AuthService, SearchService],
+  providers: [AuthService, SearchService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

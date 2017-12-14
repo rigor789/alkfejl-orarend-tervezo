@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http} from "@angular/http";
-import {User} from "../model/User";
+import {Role, User} from "../model/User";
 import {Server} from "../utils/Server";
 
 @Injectable()
@@ -17,6 +17,7 @@ export class AuthService {
       .map(res => {
         this.isLoggedIn = true;
         this.user = user; // todo use server response
+        this.user.role = Role.USER;
         //this.user = res.json();
         return this.user;
       })

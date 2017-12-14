@@ -1,7 +1,6 @@
 <div class="page-body" id="search-page">
-  <h2 class="mat-h2">Search</h2>
+  <h2 class="mat-h2">Kurzus kereső</h2>
   <mat-card>
-
     <div class="form-control">
       <mat-form-field class="full-width">
         <input matInput (keyup)="applyFilter($event.target.value)"
@@ -15,18 +14,7 @@
       </mat-form-field>
     </div>
 
-    <!--<mat-form-field>-->
-    <!--<mat-select [(value)]="selectedSubject" placeholder="Select a subject">-->
-    <!--<mat-option *ngFor="let subject of subjects" [value]="selectedSubject">{{subject}}</mat-option>-->
-    <!--</mat-select>-->
-    <!--</mat-form-field>-->
-
-    <!--<br>-->
-
-    <!--<button mat-raised-button class="mat-primary" (click)="submit()">Search</button>-->
-
     <mat-table #table [dataSource]="dataSource" matSort>
-
       <ng-container matColumnDef="name">
         <mat-header-cell *matHeaderCellDef> Name.</mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.name}}</mat-cell>

@@ -1,17 +1,18 @@
 <mat-toolbar id="top-menu" color="primary">
-  <h1 class="mat-h1">Orarend Tervezo</h1>
+  <h1 class="mat-h1 brand" routerLink="/">Orarend Tervezo</h1>
 
   <div class="center">
-    <a mat-button>Orarend</a>
-    <a mat-button routerLink="/search">Kereső</a>
+    <span *ngIf="isLoggedIn">
+      <a mat-button routerLink="/timetable">Órarend</a>
+      <a mat-button routerLink="/search">Kurzus Kereső</a>
+    </span>
   </div>
 
   <div class="right-side" *ngIf="!isLoggedIn">
-    <a mat-button routerLink="/login">Login</a>/
-    <a mat-button routerLink="/register">Register</a>
+    <a mat-button routerLink="/login">Bejelentkezés</a> /
+    <a mat-button routerLink="/register">Regisztráció</a>
   </div>
   <div class="right-side" *ngIf="isLoggedIn">
-    <span>Hi, {{ authService.user.username }}</span>
-    <a mat-button (click)="logout()">Logout</a>
+    <a mat-button (click)="logout()">{{ authService.user.username }} | Kijelentkezés</a>
   </div>
 </mat-toolbar>
