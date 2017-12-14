@@ -44,6 +44,7 @@ export class Course {
     this.version = version;
     this.name = name;
     this.subCode = subCode;
+    console.log(interval);
     this.interval = interval;
     this.room = room;
     this.note = note;

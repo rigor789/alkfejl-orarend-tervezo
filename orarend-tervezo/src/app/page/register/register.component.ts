@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from "@angular/router";
+import {AuthService} from "../../service/auth.service";
+import {User} from "../../model/User";
 
 @Component(
 {
@@ -17,16 +19,16 @@ export class RegisterComponent implements OnInit {
   });
 
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
 
   submit() {
-      /*this.authService.login(new User(this.username.value, this.password.value))
+      this.authService.register(new User(this.username.value, this.password.value))
         .subscribe(
-          res => this.router.navigate(['/issues']),
-          err => console.log(err))*/
+          res => this.router.navigate(['/search']),
+          err => console.log(err))
     }
 
   get firstname(): AbstractControl {
@@ -44,5 +46,4 @@ export class RegisterComponent implements OnInit {
   get password(): AbstractControl {
     return this.registerForm.get('password');
   }
-
 }

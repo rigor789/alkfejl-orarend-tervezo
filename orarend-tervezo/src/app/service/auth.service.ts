@@ -16,7 +16,8 @@ export class AuthService {
     return this.http.post(Server.getURLFor(Server.routes.LOGIN), user)
       .map(res => {
         this.isLoggedIn = true;
-        this.user = res.json();
+        this.user = user; // todo use server response
+        //this.user = res.json();
         return this.user;
       })
   }
@@ -25,13 +26,14 @@ export class AuthService {
     return this.http.post(Server.getURLFor(Server.routes.REGISTER), user)
       .map(res => {
         this.isLoggedIn = true;
-        this.user = res.json();
+        this.user = user; // todo use server response
+        //this.user = res.json();
         return this.user;
       })
   }
 
   logout() {
-    return this.http.get(Server.getURLFor(Server.routes.LOGOUT))
+    return this.http.post(Server.getURLFor(Server.routes.LOGOUT), this.user)
       .map(res => {
         this.user = new User();
         this.isLoggedIn = false;

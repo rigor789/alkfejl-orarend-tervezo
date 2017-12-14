@@ -6,8 +6,12 @@
     <a mat-button routerLink="/search">Kereső</a>
   </div>
 
-  <div class="right-side">
+  <div class="right-side" *ngIf="!isLoggedIn">
     <a mat-button routerLink="/login">Login</a>/
     <a mat-button routerLink="/register">Register</a>
+  </div>
+  <div class="right-side" *ngIf="isLoggedIn">
+    <span>Hi, {{ authService.user.username }}</span>
+    <a mat-button (click)="logout()">Logout</a>
   </div>
 </mat-toolbar>

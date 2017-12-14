@@ -1,3 +1,4 @@
+// 8:30 2.em
 import {Component, OnInit} from '@angular/core';
 import {DataSource} from "@angular/cdk/collections";
 import {Course} from "../../model/Course";
@@ -12,7 +13,15 @@ import * as debounce from "debounce";
 })
 
 export class SearchComponent implements OnInit {
-  displayedColumns: String[] = ['name', 'subCode', 'interval', 'room', 'note', 'type', 'courseCode', 'teacher'];
+  displayedColumns: String[] = [
+    'name',
+    'subCode',
+    // 'room',
+    // 'note',
+    // 'type',
+    'courseCode',
+    // 'teacher'
+  ];
   dataSource: DataSource<Course> = new CourseDataSource(this.searchService, '');
   subjects = SUBJECTS;
 
@@ -23,16 +32,23 @@ export class SearchComponent implements OnInit {
   }
 
   filter: String = '';
-  applyFilter = debounce((filter) => {
+  applyResFilter = debounce((filter) => {
     console.log('fired');
+    this.dataSource = new CourseDataSource(this.searchService, filter)
+  });
+
+  applyFilter(filter) {
     filter = filter.trim();
     filter = filter.toLowerCase();
-    if (this.filter === filter) {
-      return
+    if (this.filter !== filter) {
+      this.filter = filter;
+      this.applyResFilter(filter)
     }
-    this.filter = filter;
-    this.dataSource = new CourseDataSource(this.searchService, filter)
-  }, 300)
+  }
+
+  get filteredSubjects() {
+    return this.subjects.filter(sub => sub.toLowerCase().indexOf(this.filter.toString().toLowerCase()) > -1);
+  }
 }
 
 export class CourseDataSource extends DataSource<Course> {

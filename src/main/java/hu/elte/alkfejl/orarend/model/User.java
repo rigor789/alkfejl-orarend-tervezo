@@ -29,6 +29,6 @@ public class User extends BaseEntity {
     private Role role;
 
     public enum Role {
-        USER, ADMIN, DEVELOPER
+        GUEST, USER, ADMIN, DEVELOPER
     }
 }
