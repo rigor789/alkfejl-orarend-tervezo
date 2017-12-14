@@ -10,8 +10,9 @@ import * as debounce from "debounce";
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
+
 export class SearchComponent implements OnInit {
-  displayedColumns: String[] = ["name", "subCode", "courseCode"];
+  displayedColumns: String[] = ['name', 'subCode', 'interval', 'room', 'note', 'type', 'courseCode', 'teacher'];
   dataSource: DataSource<Course> = new CourseDataSource(this.searchService, '');
   subjects = SUBJECTS;
 
