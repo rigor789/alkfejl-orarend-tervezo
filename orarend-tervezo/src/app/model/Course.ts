@@ -1,5 +1,30 @@
+// "{
+// "day":"MONDAY",
+// "endTime":{"hour":14,"min":0},
+// "startTime":{"hour":12,"min":0},
+// "length":120}"
+export class Time {
+  private hour: number;
+  private min: number;
+
+  constructor(hour: number, min: number) {
+    this.hour = hour;
+    this.min = min;
+  }
+}
+
 export class Interval {
-  // todo
+  private day: String;
+  private startTime: Time;
+  private endTime: Time;
+  private length: number;
+
+  constructor(day?: String, startTime?: Time, endTime?: Time, length?: number) {
+    this.day = day;
+    this.startTime = startTime;
+    this.endTime = endTime;
+    this.length = length;
+  }
 }
 
 export class Course {
