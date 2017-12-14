@@ -43,7 +43,7 @@ public class ScheduleService {
                 courses.add(new Course(lines[i]));
             } catch(IllegalArgumentException ex) {
                 System.err.println(ex.getMessage());
-            }
+            } catch(Exception ex) {}
         }
         return courses;
     }

@@ -4,13 +4,16 @@ import {
   MatInputModule,
   MatSelectModule,
   MatTableModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatCardModule,
+  MatAutocompleteModule,
 } from '@angular/material';
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
 @NgModule({
-  imports: [MatFormFieldModule, MatInputModule, MatButtonModule, MatToolbarModule, MatTableModule, MatSelectModule],
-  exports: [MatFormFieldModule, MatInputModule, MatButtonModule, MatToolbarModule, MatTableModule, MatSelectModule],
+  imports: [MatFormFieldModule, MatInputModule, MatButtonModule, MatToolbarModule, MatTableModule, MatSelectModule, MatCardModule, MatAutocompleteModule],
+  exports: [MatFormFieldModule, MatInputModule, MatButtonModule, MatToolbarModule, MatTableModule, MatSelectModule, MatCardModule, MatAutocompleteModule],
 })
-export class MaterialDesignModule { }
+export class MaterialDesignModule {
+}
 
