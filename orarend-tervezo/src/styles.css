@@ -5,3 +5,11 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.page-body {
+  padding: 20px 70px 50px;
+}
+
+.full-width {
+  width: 100%;
+}
