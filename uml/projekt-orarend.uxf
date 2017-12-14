@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>13</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>39</x>
-      <y>377</y>
-      <w>130</w>
-      <h>143</h>
+      <x>143</x>
+      <y>418</y>
+      <w>110</w>
+      <h>121</h>
     </coordinates>
     <panel_attributes>Felhasználó</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>325</x>
-      <y>338</y>
-      <w>156</w>
-      <h>52</h>
+      <x>385</x>
+      <y>385</y>
+      <w>132</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>Bejelentkezés</panel_attributes>
     <additional_attributes/>
@@ -26,10 +26,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>871</x>
-      <y>234</y>
-      <w>208</w>
-      <h>52</h>
+      <x>847</x>
+      <y>297</y>
+      <w>176</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>Kurzus hozzáadása</panel_attributes>
     <additional_attributes/>
@@ -37,10 +37,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>897</x>
-      <y>338</y>
-      <w>208</w>
-      <h>52</h>
+      <x>869</x>
+      <y>385</y>
+      <w>176</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>Kurzus törlése</panel_attributes>
     <additional_attributes/>
@@ -48,10 +48,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>559</x>
-      <y>234</y>
-      <w>208</w>
-      <h>52</h>
+      <x>583</x>
+      <y>297</y>
+      <w>176</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>Kurzus keresése</panel_attributes>
     <additional_attributes/>
@@ -59,10 +59,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
-      <y>351</y>
-      <w>221</w>
-      <h>65</h>
+      <x>220</x>
+      <y>396</y>
+      <w>187</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>150.0;10.0;10.0;30.0</additional_attributes>
@@ -70,10 +70,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>429</x>
-      <y>247</y>
-      <w>156</w>
-      <h>117</h>
+      <x>473</x>
+      <y>308</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>100.0;10.0;10.0;70.0</additional_attributes>
@@ -81,10 +81,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
-      <y>351</y>
-      <w>130</w>
-      <h>39</h>
+      <x>506</x>
+      <y>396</y>
+      <w>110</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
@@ -92,10 +92,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>754</x>
-      <y>247</y>
-      <w>143</w>
-      <h>39</h>
+      <x>748</x>
+      <y>308</y>
+      <w>121</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
@@ -103,10 +103,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>572</x>
-      <y>338</y>
-      <w>208</w>
-      <h>52</h>
+      <x>594</x>
+      <y>385</y>
+      <w>176</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>Kurzus kiválasztása</panel_attributes>
     <additional_attributes/>
@@ -114,10 +114,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>767</x>
-      <y>351</y>
-      <w>156</w>
-      <h>39</h>
+      <x>759</x>
+      <y>396</y>
+      <w>132</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
@@ -125,10 +125,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1235</x>
-      <y>156</y>
-      <w>208</w>
-      <h>52</h>
+      <x>1155</x>
+      <y>231</y>
+      <w>176</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>Kurzus beillesztése</panel_attributes>
     <additional_attributes/>
@@ -136,10 +136,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1235</x>
-      <y>286</y>
-      <w>234</w>
-      <h>52</h>
+      <x>1155</x>
+      <y>341</y>
+      <w>198</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>Alternatíva választása</panel_attributes>
     <additional_attributes/>
@@ -147,10 +147,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1066</x>
-      <y>169</y>
-      <w>195</w>
-      <h>117</h>
+      <x>1012</x>
+      <y>242</y>
+      <w>165</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>130.0;10.0;10.0;70.0</additional_attributes>
@@ -158,10 +158,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1066</x>
-      <y>247</y>
-      <w>195</w>
-      <h>91</h>
+      <x>1012</x>
+      <y>308</y>
+      <w>165</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>130.0;50.0;10.0;10.0</additional_attributes>
@@ -169,10 +169,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>572</x>
-      <y>429</y>
-      <w>208</w>
-      <h>52</h>
+      <x>594</x>
+      <y>462</y>
+      <w>176</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>Órarend törlése</panel_attributes>
     <additional_attributes/>
@@ -180,10 +180,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>429</x>
-      <y>377</y>
-      <w>169</w>
-      <h>104</h>
+      <x>473</x>
+      <y>418</y>
+      <w>143</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>110.0;60.0;10.0;10.0</additional_attributes>

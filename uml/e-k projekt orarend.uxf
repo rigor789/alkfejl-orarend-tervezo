@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>12</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>492</x>
-      <y>60</y>
-      <w>144</w>
-      <h>48</h>
+      <x>407</x>
+      <y>143</y>
+      <w>132</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>ID</panel_attributes>
     <additional_attributes/>
@@ -15,32 +15,32 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>84</x>
-      <y>72</y>
-      <w>276</w>
-      <h>48</h>
+      <x>33</x>
+      <y>154</y>
+      <w>121</w>
+      <h>44</h>
     </coordinates>
-    <panel_attributes>felhasználói név</panel_attributes>
+    <panel_attributes>username</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>36</x>
-      <y>192</y>
-      <w>144</w>
-      <h>48</h>
+      <x>0</x>
+      <y>209</y>
+      <w>132</w>
+      <h>44</h>
     </coordinates>
-    <panel_attributes>jelszó</panel_attributes>
+    <panel_attributes>password</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>288</x>
-      <y>180</y>
-      <w>120</w>
-      <h>36</h>
+      <x>220</x>
+      <y>253</y>
+      <w>110</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>Felhasználó</panel_attributes>
     <additional_attributes/>
@@ -48,43 +48,43 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1020</x>
-      <y>180</y>
-      <w>120</w>
-      <h>36</h>
+      <x>891</x>
+      <y>253</y>
+      <w>110</w>
+      <h>33</h>
     </coordinates>
-    <panel_attributes>Kurzusok</panel_attributes>
+    <panel_attributes>Course</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1044</x>
-      <y>72</y>
-      <w>144</w>
-      <h>48</h>
+      <x>913</x>
+      <y>154</y>
+      <w>132</w>
+      <h>44</h>
     </coordinates>
-    <panel_attributes>kurzus név</panel_attributes>
+    <panel_attributes>name</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1272</x>
-      <y>216</y>
-      <w>144</w>
-      <h>48</h>
+      <x>1122</x>
+      <y>187</y>
+      <w>132</w>
+      <h>44</h>
     </coordinates>
-    <panel_attributes>kurzus kód</panel_attributes>
+    <panel_attributes>subCode</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>888</x>
-      <y>72</y>
-      <w>144</w>
-      <h>48</h>
+      <x>770</x>
+      <y>154</y>
+      <w>132</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>ID</panel_attributes>
     <additional_attributes/>
@@ -92,21 +92,21 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1056</x>
-      <y>288</y>
-      <w>144</w>
-      <h>48</h>
+      <x>1155</x>
+      <y>231</y>
+      <w>132</w>
+      <h>44</h>
     </coordinates>
-    <panel_attributes>időpont</panel_attributes>
+    <panel_attributes>room</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>600</x>
-      <y>156</y>
-      <w>265</w>
-      <h>97</h>
+      <x>506</x>
+      <y>231</y>
+      <w>243</w>
+      <h>89</h>
     </coordinates>
     <panel_attributes>Felhasználó által
 felvett kurzusok</panel_attributes>
@@ -129,32 +129,32 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>168</x>
-      <y>192</y>
-      <w>144</w>
-      <h>48</h>
+      <x>121</x>
+      <y>220</y>
+      <w>121</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;20.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;90.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>108</y>
-      <w>60</w>
-      <h>96</h>
+      <x>110</x>
+      <y>187</y>
+      <w>132</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;10.0;30.0;60.0</additional_attributes>
+    <additional_attributes>13.0;10.0;100.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>72</y>
-      <w>120</w>
-      <h>132</h>
+      <x>319</x>
+      <y>154</y>
+      <w>110</w>
+      <h>121</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>80.0;10.0;10.0;90.0</additional_attributes>
@@ -162,10 +162,10 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>192</y>
-      <w>240</w>
-      <h>36</h>
+      <x>319</x>
+      <y>264</y>
+      <w>220</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
@@ -173,10 +173,10 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>840</x>
-      <y>180</y>
-      <w>204</w>
-      <h>48</h>
+      <x>726</x>
+      <y>253</y>
+      <w>187</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>150.0;16.0;10.0;20.0</additional_attributes>
@@ -184,10 +184,10 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>948</x>
-      <y>108</y>
-      <w>96</w>
-      <h>108</h>
+      <x>825</x>
+      <y>187</y>
+      <w>88</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;60.0;66.0</additional_attributes>
@@ -195,10 +195,10 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1092</x>
-      <y>108</y>
-      <w>36</w>
-      <h>96</h>
+      <x>957</x>
+      <y>187</y>
+      <w>33</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -206,32 +206,32 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1128</x>
-      <y>204</y>
-      <w>168</w>
-      <h>60</h>
+      <x>990</x>
+      <y>198</y>
+      <w>154</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>120.0;30.0;10.0;10.0</additional_attributes>
+    <additional_attributes>120.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1104</x>
-      <y>204</y>
-      <w>36</w>
-      <h>108</h>
+      <x>902</x>
+      <y>275</y>
+      <w>99</w>
+      <h>143</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;110.0;70.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>672</x>
-      <y>312</y>
-      <w>144</w>
-      <h>48</h>
+      <x>572</x>
+      <y>374</y>
+      <w>132</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>ID</panel_attributes>
     <additional_attributes/>
@@ -239,10 +239,10 @@ drawPolygon(p);</custom_code>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>672</x>
-      <y>48</y>
-      <w>144</w>
-      <h>48</h>
+      <x>572</x>
+      <y>132</y>
+      <w>132</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>kurzus ID</panel_attributes>
     <additional_attributes/>
@@ -250,10 +250,10 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
-      <y>228</y>
-      <w>36</w>
-      <h>108</h>
+      <x>616</x>
+      <y>297</y>
+      <w>33</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -261,10 +261,10 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
-      <y>84</y>
-      <w>36</w>
-      <h>108</h>
+      <x>616</x>
+      <y>165</y>
+      <w>33</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -272,10 +272,10 @@ drawPolygon(p);</custom_code>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>60</x>
-      <y>324</y>
-      <w>276</w>
-      <h>48</h>
+      <x>22</x>
+      <y>264</y>
+      <w>99</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>teljes név</panel_attributes>
     <additional_attributes/>
@@ -283,12 +283,166 @@ drawPolygon(p);</custom_code>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>204</y>
-      <w>72</w>
-      <h>144</h>
+      <x>99</x>
+      <y>264</y>
+      <w>143</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>40.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>110.0;20.0;18.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1056</x>
+      <y>143</y>
+      <w>132</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>interval</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1067</x>
+      <y>319</y>
+      <w>132</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>note</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1133</x>
+      <y>275</y>
+      <w>132</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>type</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>836</x>
+      <y>396</y>
+      <w>132</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>courseCode</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>990</x>
+      <y>363</y>
+      <w>132</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>teacher</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>979</x>
+      <y>275</y>
+      <w>66</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>40.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>275</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>80.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>275</y>
+      <w>165</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>242</y>
+      <w>187</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>165</y>
+      <w>110</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>165</x>
+      <y>132</y>
+      <w>110</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>email</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>209</x>
+      <y>165</y>
+      <w>44</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>13.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>88</x>
+      <y>308</y>
+      <w>99</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>role</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>165</x>
+      <y>275</y>
+      <w>77</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>50.0;10.0;18.0;40.0</additional_attributes>
   </element>
 </diagram>
