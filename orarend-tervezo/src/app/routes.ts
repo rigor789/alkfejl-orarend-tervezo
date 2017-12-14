@@ -18,8 +18,14 @@ export const appRoutes: Routes = [
       {path: '', redirectTo: 'login', pathMatch: 'full'},
       {path: 'login', component: LoginComponent, data: {roles: [Role.GUEST]}},
       {path: 'register', component: RegisterComponent, data: {roles: [Role.GUEST]}},
-      {path: 'timetable', component: TimetableComponent, data: {roles: [Role.USER]}},
-      {path: 'search', component: SearchComponent, data: {roles: [Role.USER]}},
+      {path: 'timetable', component: TimetableComponent, data: {roles: [Role.USER, Role.ADMIN, Role.DEVELOPER]}},
+      {path: 'search', component: SearchComponent, data: {roles: [Role.USER, Role.ADMIN, Role.DEVELOPER]}},
+
+      // Admin
+      {path: 'users', component: SearchComponent, data: {roles: [Role.ADMIN, Role.DEVELOPER]}},
+      {path: 'users/:id', component: SearchComponent, data: {roles: [Role.ADMIN, Role.DEVELOPER]}},
+
+      // catch all
       {path: '**', component: ErrorComponent}
     ]
   }
