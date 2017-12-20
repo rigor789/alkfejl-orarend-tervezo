@@ -68,6 +68,14 @@ export class UserDetailComponent implements OnInit {
       )
   }
 
+  deleteComment(comment) {
+    this.userService.deleteComment(this.user, comment)
+      .subscribe(
+        res => this.user.comments = this.user.comments.filter(c => c.id !== comment.id) ,
+        err => console.log(err)
+      )
+  }
+
 
   get username(): AbstractControl {
     return this.editForm.get('username');

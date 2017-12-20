@@ -25,6 +25,14 @@ export class UsersComponent implements OnInit {
   ngOnInit() {
     this.dataSource = new UserDataSource(this.userService);
   }
+
+  delete(user) {
+    this.userService.delete(user)
+    .subscribe(
+      res => this.dataSource = new UserDataSource(this.userService),
+      err => console.log(err)
+    )
+  }
 }
 
 export class UserDataSource extends DataSource<User> {

@@ -30,4 +30,14 @@ export class UserService {
     })
       .map(res => res.json())
   }
+
+  deleteComment(user: User, comment) {
+    return this.http.post(Server.getURLFor(Server.routes.USERS) + '/' + user.id + '/comment/' + comment.id + '/delete', {})
+      .map(res => res.json())
+  }
+
+  delete(user: User) {
+    return this.http.post(Server.getURLFor(Server.routes.USERS) + '/' + user.id + '/delete', {})
+      .map(res => res.json())
+  }
 }

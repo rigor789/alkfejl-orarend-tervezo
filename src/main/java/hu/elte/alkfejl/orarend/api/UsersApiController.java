@@ -51,4 +51,20 @@ public class UsersApiController {
     public ResponseEntity<User> comment(@PathVariable int id, @RequestBody UserComment comment) {
         return ResponseEntity.ok(this.userService.comment(id, comment));
     }
+    
+    @Role({User.Role.ADMIN, User.Role.DEVELOPER})
+    @PostMapping("/{id}/delete")
+    public ResponseEntity<Boolean> delete(@PathVariable int id) {
+        this.userService.delete(id);
+
+        return ResponseEntity.ok(true);
+    }
+
+    @Role({User.Role.ADMIN, User.Role.DEVELOPER})
+    @PostMapping("/{id}/comment/{comment_id}/delete")
+    public ResponseEntity<Boolean> delete(@PathVariable int id, @PathVariable int comment_id) {
+        this.userService.deleteComment(id, comment_id);
+
+        return ResponseEntity.ok(true);
+    }
 }

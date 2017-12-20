@@ -60,4 +60,15 @@ public class UserService {
 
         return this.userRepository.save(user);
     }
+
+    public void delete(int id) {
+        this.userRepository.delete(id);
+    }
+
+    public void deleteComment(int user_id, int comment_id) {
+        User user = this.userRepository.findOne(user_id);
+        user.getComments().removeIf(comment -> comment.getId() == comment_id);
+
+        this.userRepository.save(user);
+    }
 }

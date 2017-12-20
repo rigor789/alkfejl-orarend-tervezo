@@ -44,6 +44,7 @@
   <mat-card>
     <div *ngFor="let comment of user.comments" class="user-comment">
       <span>{{ comment.content }}</span>
+      <button mat-raised-button class="mat-primary" (click)="deleteComment(comment)">Delete Comment</button>
     </div>
     <br>
     <hr>
