@@ -5,9 +5,10 @@ import hu.elte.alkfejl.orarend.service.schedule.IntervalConverter;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name="COURSES")
+@Table(name = "COURSES")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -40,6 +41,10 @@ public class Course extends BaseEntity {
     @Column(nullable = false)
     private String teacher; //11
 
+    //@ManyToMany(targetEntity = User.class, cascade = CascadeType.DETACH)
+    //private List<User> users;
+
+
     boolean overlapsWith(Course other) {
         return interval.overlapsWith(other.getInterval());
     }
@@ -63,7 +68,7 @@ public class Course extends BaseEntity {
 
         @Override
         public String toString() {
-            switch(this) {
+            switch (this) {
                 case Practice:
                     return "Practice";
                 case Presentation:

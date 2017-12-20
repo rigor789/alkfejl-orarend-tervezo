@@ -6,6 +6,7 @@ import {SearchComponent} from './page/search/search.component';
 import {ErrorComponent} from "./page/error/error.component";
 import {AuthGuard} from "./guard/auth.guard";
 import {Role} from "./model/User";
+import {UsersComponent} from "./page/users/users.component";
 
 
 export const appRoutes: Routes = [
@@ -22,8 +23,8 @@ export const appRoutes: Routes = [
       {path: 'search', component: SearchComponent, data: {roles: [Role.USER, Role.ADMIN, Role.DEVELOPER]}},
 
       // Admin
-      {path: 'users', component: SearchComponent, data: {roles: [Role.ADMIN, Role.DEVELOPER]}},
-      {path: 'users/:id', component: SearchComponent, data: {roles: [Role.ADMIN, Role.DEVELOPER]}},
+      {path: 'users', component: UsersComponent, data: {roles: [Role.ADMIN, Role.DEVELOPER]}},
+      {path: 'users/:id', component: UsersComponent, data: {roles: [Role.ADMIN, Role.DEVELOPER]}},
 
       // catch all
       {path: '**', component: ErrorComponent}

@@ -5,6 +5,7 @@
     <span *ngIf="isLoggedIn">
       <a mat-button routerLink="/timetable">Órarend</a>
       <a mat-button routerLink="/search">Kurzus Kereső</a>
+      <a mat-button routerLink="/users" *ngIf="isAdmin">Felhasználók</a>
     </span>
   </div>
 

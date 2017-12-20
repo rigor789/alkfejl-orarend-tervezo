@@ -12,8 +12,6 @@ import {User} from "../../model/User";
   })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup = new FormGroup({
-    firstname: new FormControl('', [Validators.required]),
-    lastname: new FormControl('', [Validators.required]),
     username: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required])
@@ -28,7 +26,11 @@ export class RegisterComponent implements OnInit {
   }
 
   submit() {
-    this.authService.register(new User(this.username.value, this.password.value, this.email.value))
+    this.authService.register(new User(
+      this.username.value,
+      this.password.value,
+      this.email.value
+    ))
       .subscribe(
         res => this.router.navigate(['/search']),
         err => this.error = 'Something went wrong. Try again.')

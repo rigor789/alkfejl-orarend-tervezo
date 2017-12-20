@@ -16,7 +16,14 @@ export class AuthService {
     return this.http.post(Server.getURLFor(Server.routes.LOGIN), user)
       .map(res => {
         this.isLoggedIn = true;
-        this.user = res.json();
+        res = res.json()
+        this.user = new User();
+        Object.keys(res).forEach((k) => {
+          this.user[k] = res[k];
+        })
+
+        ;(<any>global).user = this.user;
+
         return this.user;
       })
   }
@@ -25,7 +32,12 @@ export class AuthService {
     return this.http.post(Server.getURLFor(Server.routes.REGISTER), user)
       .map(res => {
         this.isLoggedIn = true;
-        this.user = res.json();
+        res = res.json()
+        this.user = new User();
+        Object.keys(res).forEach((k) => {
+          this.user[k] = res[k];
+        })
+
         return this.user;
       })
   }

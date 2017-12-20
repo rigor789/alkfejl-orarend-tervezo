@@ -6,6 +6,7 @@ export class Role {
 }
 
 export class User {
+  id: Number;
   username: String;
   password: String;
   email: String;
@@ -16,5 +17,9 @@ export class User {
     this.password = password || '';
     this.email = email || '';
     this.role = role || Role.GUEST;
+  }
+
+  isAdmin(): Boolean {
+    return [Role.ADMIN, Role.DEVELOPER].includes(this.role);
   }
 }

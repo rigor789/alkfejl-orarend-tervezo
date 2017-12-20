@@ -6,6 +6,8 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="USERS")
@@ -27,6 +29,9 @@ public class User extends BaseEntity {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    @ManyToMany(targetEntity = Course.class, cascade = CascadeType.DETACH)
+    private List<Course> courses;
 
     public enum Role {
         GUEST, USER, ADMIN, DEVELOPER

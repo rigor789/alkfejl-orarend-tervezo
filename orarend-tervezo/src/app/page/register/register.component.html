@@ -5,24 +5,6 @@
   <form [formGroup]="registerForm" novalidate>
     <div class="form-control">
       <mat-form-field>
-        <input matInput placeholder="First name" formControlName="firstname">
-        <mat-error *ngIf="firstname.hasError('required')">
-          First name is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
-    </div>
-
-    <div class="form-control">
-      <mat-form-field>
-        <input matInput placeholder="Last name" formControlName="lastname">
-        <mat-error *ngIf="lastname.hasError('required')">
-          Last name is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
-    </div>
-
-    <div class="form-control">
-      <mat-form-field>
         <input matInput placeholder="Username" formControlName="username">
         <mat-error *ngIf="username.hasError('required')">
           Username is <strong>required</strong>

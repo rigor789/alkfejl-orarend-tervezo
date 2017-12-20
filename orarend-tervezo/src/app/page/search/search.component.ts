@@ -5,6 +5,7 @@ import {Course} from "../../model/Course";
 import {SearchService} from "../../service/search.service";
 import {Observable} from "rxjs/Observable";
 import * as debounce from "debounce";
+import {TimetableService} from "../../service/timetable.service";
 
 @Component({
   selector: 'app-search',
@@ -29,7 +30,7 @@ export class SearchComponent implements OnInit {
   filter: String = '';
 
 
-  constructor(private searchService: SearchService) {
+  constructor(private searchService: SearchService, private timetableService: TimetableService) {
   }
 
   ngOnInit(): void {
@@ -54,6 +55,10 @@ export class SearchComponent implements OnInit {
 
   select(course) {
     console.log(course)
+    this.timetableService.select(course).subscribe(
+      res => console.log(res),
+      err => console.log(err, 'err')
+    )
   }
 }
 

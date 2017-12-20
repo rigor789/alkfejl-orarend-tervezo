@@ -17,6 +17,9 @@ import {SearchService} from "./service/search.service";
 import {HttpModule} from "@angular/http";
 import {AuthGuard} from "./guard/auth.guard";
 import { ErrorComponent } from './page/error/error.component';
+import { UsersComponent } from './page/users/users.component';
+import {UserService} from "./service/user.service";
+import {TimetableService} from "./service/timetable.service";
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { ErrorComponent } from './page/error/error.component';
     TimetableComponent,
     SearchComponent,
     ErrorComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,7 @@ import { ErrorComponent } from './page/error/error.component';
     HttpModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [AuthService, SearchService, AuthGuard],
+  providers: [AuthService, SearchService, UserService, TimetableService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -9,6 +9,7 @@ import {NavigationEnd, Router} from "@angular/router";
 })
 export class MenuComponent implements OnInit {
   isLoggedIn: Boolean = false;
+  isAdmin: Boolean = false;
 
   constructor(public authService: AuthService, private router: Router) {
   }
@@ -17,6 +18,7 @@ export class MenuComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isLoggedIn = this.authService.isLoggedIn;
+        this.isAdmin = this.authService.user.isAdmin()
       }
     })
   }
