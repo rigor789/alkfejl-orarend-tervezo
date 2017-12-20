@@ -5,9 +5,7 @@ import hu.elte.alkfejl.orarend.repository.UserRepository;
 import hu.elte.alkfejl.orarend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,4 +41,14 @@ public class UsersApiController {
     }
 
 
+    @GetMapping("/{id}")
+    public ResponseEntity<User> findOne(@PathVariable int id) {
+        return ResponseEntity.ok(userRepository.findOne(id));
+    }
+
+
+    @PostMapping("/{id}")
+    public ResponseEntity<User> save(@PathVariable int id, @RequestBody User user) {
+        return ResponseEntity.ok(this.userService.update(id, user));
+    }
 }

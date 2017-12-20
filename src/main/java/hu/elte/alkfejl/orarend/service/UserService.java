@@ -36,6 +36,15 @@ public class UserService {
         return this.user;
     }
 
+    public User update(int id, User user) {
+        User currentUser = this.userRepository.findOne(id);
+        currentUser.setUsername(user.getUsername());
+        currentUser.setEmail(user.getEmail());
+        currentUser.setPassword(user.getPassword());
+
+        return this.userRepository.save(currentUser);
+    }
+
     public boolean isValid(User user) {
         return userRepository.findByUsernameAndPassword(user.getUsername(), user.getPassword()).isPresent();
     }

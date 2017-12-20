@@ -36,13 +36,6 @@ export class RegisterComponent implements OnInit {
         err => this.error = 'Something went wrong. Try again.')
   }
 
-  get firstname(): AbstractControl {
-    return this.registerForm.get('firstname');
-  }
-
-  get lastname(): AbstractControl {
-    return this.registerForm.get('lastname');
-  }
 
   get username(): AbstractControl {
     return this.registerForm.get('username');

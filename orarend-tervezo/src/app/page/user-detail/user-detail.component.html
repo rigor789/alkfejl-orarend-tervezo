@@ -1,0 +1,39 @@
+<div class="page-body">
+  <h2 class="mat-h2">Felhasználó Szerkesztése: {{ user.username }}</h2>
+  <mat-card>
+    <form [formGroup]="editForm" novalidate>
+      <div class="form-control">
+        <mat-form-field>
+          <input matInput placeholder="Username" formControlName="username">
+          <mat-error *ngIf="username.hasError('required')">
+            Username is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div class="form-control">
+        <mat-form-field>
+          <input matInput placeholder="Email" formControlName="email">
+          <mat-error *ngIf="email.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf="email.hasError('email')">
+            Email is <strong>invalid</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-control">
+        <mat-form-field>
+          <input matInput placeholder="Password" formControlName="password" type="password">
+          <mat-error *ngIf="password.hasError('required')">
+            Password is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <button mat-raised-button class="mat-primary" (click)="save()" [disabled]="!editForm.valid">Save</button>
+    </form>
+  </mat-card>
+</div>

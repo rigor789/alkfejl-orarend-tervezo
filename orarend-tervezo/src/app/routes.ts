@@ -7,6 +7,7 @@ import {ErrorComponent} from "./page/error/error.component";
 import {AuthGuard} from "./guard/auth.guard";
 import {Role} from "./model/User";
 import {UsersComponent} from "./page/users/users.component";
+import {UserDetailComponent} from "./page/user-detail/user-detail.component";
 
 
 export const appRoutes: Routes = [
@@ -24,7 +25,7 @@ export const appRoutes: Routes = [
 
       // Admin
       {path: 'users', component: UsersComponent, data: {roles: [Role.ADMIN, Role.DEVELOPER]}},
-      {path: 'users/:id', component: UsersComponent, data: {roles: [Role.ADMIN, Role.DEVELOPER]}},
+      {path: 'users/:id', component: UserDetailComponent, data: {roles: [Role.ADMIN, Role.DEVELOPER]}},
 
       // catch all
       {path: '**', component: ErrorComponent}

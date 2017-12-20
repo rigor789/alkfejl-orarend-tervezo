@@ -13,4 +13,14 @@ export class UserService {
     return this.http.get(Server.getURLFor(Server.routes.USERS))
       .map(res => res.json())
   }
+
+  findOne(id: Number) {
+    return this.http.get(Server.getURLFor(Server.routes.USERS) + '/' + id)
+      .map(res => res.json())
+  }
+
+  save(user: User, data) {
+    return this.http.post(Server.getURLFor(Server.routes.USERS) + '/' + user.id, data)
+      .map(res => res.json())
+  }
 }

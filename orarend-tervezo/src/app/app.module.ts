@@ -20,6 +20,7 @@ import { ErrorComponent } from './page/error/error.component';
 import { UsersComponent } from './page/users/users.component';
 import {UserService} from "./service/user.service";
 import {TimetableService} from "./service/timetable.service";
+import { UserDetailComponent } from './page/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {TimetableService} from "./service/timetable.service";
     SearchComponent,
     ErrorComponent,
     UsersComponent,
+    UserDetailComponent,
   ],
   imports: [
     BrowserModule,

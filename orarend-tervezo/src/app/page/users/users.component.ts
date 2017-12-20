@@ -20,14 +20,10 @@ export class UsersComponent implements OnInit {
 
 
   constructor(private userService: UserService) {
-    this.dataSource = new UserDataSource(userService);
   }
 
   ngOnInit() {
-  }
-
-  edit(user: User) {
-    console.log(user)
+    this.dataSource = new UserDataSource(this.userService);
   }
 }
 
