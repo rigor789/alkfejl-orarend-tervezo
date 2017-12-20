@@ -14,6 +14,7 @@ export class User {
   email: String;
   role: String;
   courses: Array<Course> = [];
+  comments: Array<any> = [];
 
   constructor(username?: String, password?: String, email?: String, role?: String) {
     this.username = username || '';

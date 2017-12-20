@@ -1,0 +1,17 @@
+.user-comment {
+  margin-top: 1em;
+}
+
+.user-comment > span {
+  background: rgba(47, 203, 230, 0.38);
+  color: #fff;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 1em;
+}
+
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}

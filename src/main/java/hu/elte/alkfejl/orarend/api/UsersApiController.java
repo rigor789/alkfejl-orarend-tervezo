@@ -2,6 +2,7 @@ package hu.elte.alkfejl.orarend.api;
 
 import hu.elte.alkfejl.orarend.annotation.Role;
 import hu.elte.alkfejl.orarend.model.User;
+import hu.elte.alkfejl.orarend.model.UserComment;
 import hu.elte.alkfejl.orarend.repository.UserRepository;
 import hu.elte.alkfejl.orarend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,5 +44,11 @@ public class UsersApiController {
     @PostMapping("/{id}")
     public ResponseEntity<User> save(@PathVariable int id, @RequestBody User user) {
         return ResponseEntity.ok(this.userService.update(id, user));
+    }
+
+    @Role({User.Role.ADMIN, User.Role.DEVELOPER})
+    @PostMapping("/{id}/comment")
+    public ResponseEntity<User> comment(@PathVariable int id, @RequestBody UserComment comment) {
+        return ResponseEntity.ok(this.userService.comment(id, comment));
     }
 }

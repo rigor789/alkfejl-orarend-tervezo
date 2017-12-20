@@ -19,7 +19,7 @@ export class UserDetailComponent implements OnInit {
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required])
   });
-  error: String = '';
+  new_comment: String = '';
 
   constructor(private userService: UserService, private router: Router, private route: ActivatedRoute) {
     this.route.params.subscribe(
@@ -47,6 +47,23 @@ export class UserDetailComponent implements OnInit {
     this.userService.save(this.user, this.editForm.getRawValue())
       .subscribe(
         res => this.router.navigate(['/users']),
+        err => console.log(err)
+      )
+  }
+
+  addComment() {
+    let comment = this.new_comment.trim()
+
+    if (!comment.length) {
+      return;
+    }
+
+    this.userService.addComment(this.user, comment)
+      .subscribe(
+        res => {
+          this.new_comment = ''
+          this.user.comments = res.comments
+        },
         err => console.log(err)
       )
   }

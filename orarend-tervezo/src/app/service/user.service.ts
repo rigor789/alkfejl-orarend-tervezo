@@ -23,4 +23,11 @@ export class UserService {
     return this.http.post(Server.getURLFor(Server.routes.USERS) + '/' + user.id, data)
       .map(res => res.json())
   }
+
+  addComment(user: User, comment: String) {
+    return this.http.post(Server.getURLFor(Server.routes.USERS) + '/' + user.id + '/comment', {
+      content: comment
+    })
+      .map(res => res.json())
+  }
 }

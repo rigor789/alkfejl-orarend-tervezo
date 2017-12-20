@@ -33,6 +33,10 @@ public class User extends BaseEntity {
     @ManyToMany(targetEntity = Course.class, cascade = CascadeType.DETACH)
     private List<Course> courses;
 
+    @JoinColumn(name = "user_id")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, targetEntity = UserComment.class)
+    private List<UserComment> comments;
+
     public enum Role {
         GUEST, USER, ADMIN, DEVELOPER
     }

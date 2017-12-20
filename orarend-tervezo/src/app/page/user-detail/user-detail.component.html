@@ -36,4 +36,23 @@
       <button mat-raised-button class="mat-primary" (click)="save()" [disabled]="!editForm.valid">Save</button>
     </form>
   </mat-card>
+
+  <br>
+  <br>
+
+  <h2 class="mat-h2">Megjegyzések</h2>
+  <mat-card>
+    <div *ngFor="let comment of user.comments" class="user-comment">
+      <span>{{ comment.content }}</span>
+    </div>
+    <br>
+    <hr>
+    <form class="comment-form">
+      <mat-form-field>
+        <input matInput placeholder="New Comment" [(ngModel)]="new_comment" name="new_comment">
+      </mat-form-field>
+
+      <button mat-raised-button class="mat-primary" (click)="addComment()">Comment</button>
+    </form>
+  </mat-card>
 </div>

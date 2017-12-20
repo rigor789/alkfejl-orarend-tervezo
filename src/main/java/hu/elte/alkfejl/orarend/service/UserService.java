@@ -1,6 +1,7 @@
 package hu.elte.alkfejl.orarend.service;
 
 import hu.elte.alkfejl.orarend.model.User;
+import hu.elte.alkfejl.orarend.model.UserComment;
 import hu.elte.alkfejl.orarend.repository.UserRepository;
 import hu.elte.alkfejl.orarend.service.exceptions.InvalidUserException;
 import lombok.Data;
@@ -51,5 +52,12 @@ public class UserService {
 
     public boolean isLoggedIn() {
         return this.user != null;
+    }
+
+    public User comment(int id, UserComment comment) {
+        User user = this.userRepository.findOne(id);
+        user.getComments().add(comment);
+
+        return this.userRepository.save(user);
     }
 }
