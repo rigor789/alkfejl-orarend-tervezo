@@ -5,7 +5,8 @@ export class Server {
     REGISTER: 'auth/register',
     LOGOUT: 'auth/logout',
     USERS: 'users',
-    SELECT_COURSE: 'timetable/select'
+    SELECT_COURSE: 'timetable/select',
+    REMOVE_COURSE: 'timetable/remove'
   };
 
   private static protocol: String = 'http';

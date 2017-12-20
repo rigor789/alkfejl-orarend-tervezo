@@ -2,5 +2,57 @@
   <h2 class="mat-h2">Órarend</h2>
   <mat-card>
 
+    <mat-table #table [dataSource]="dataSource">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name. </mat-header-cell>
+        <mat-cell *matCellDef="let course"> {{course.name}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="subCode">
+        <mat-header-cell *matHeaderCellDef> Subject code </mat-header-cell>
+        <mat-cell *matCellDef="let course"> {{course.subCode}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="courseCode">
+        <mat-header-cell *matHeaderCellDef> Course code </mat-header-cell>
+        <mat-cell *matCellDef="let course"> {{course.courseCode}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="timeinterval">
+        <mat-header-cell *matHeaderCellDef> Time interval </mat-header-cell>
+        <mat-cell *matCellDef="let course"> {{course.timeinterval}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="room">
+        <mat-header-cell *matHeaderCellDef> Room </mat-header-cell>
+        <mat-cell *matCellDef="let course"> {{course.room}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="type">
+        <mat-header-cell *matHeaderCellDef> Subject type </mat-header-cell>
+        <mat-cell *matCellDef="let course"> {{course.type}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="teacher">
+        <mat-header-cell *matHeaderCellDef> Teacher name </mat-header-cell>
+        <mat-cell *matCellDef="let course"> {{course.teacher}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="note">
+        <mat-header-cell *matHeaderCellDef> Note </mat-header-cell>
+        <mat-cell *matCellDef="let course"> {{course.note}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let course">
+          <button mat-raised-button class="mat-primary" (click)="remove(course)">Remove</button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
   </mat-card>
 </div>

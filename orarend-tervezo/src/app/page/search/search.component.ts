@@ -6,6 +6,7 @@ import {SearchService} from "../../service/search.service";
 import {Observable} from "rxjs/Observable";
 import * as debounce from "debounce";
 import {TimetableService} from "../../service/timetable.service";
+import {AuthService} from "../../service/auth.service";
 
 @Component({
   selector: 'app-search',
@@ -30,7 +31,7 @@ export class SearchComponent implements OnInit {
   filter: String = '';
 
 
-  constructor(private searchService: SearchService, private timetableService: TimetableService) {
+  constructor(private searchService: SearchService, private timetableService: TimetableService, private authService: AuthService) {
   }
 
   ngOnInit(): void {
@@ -54,11 +55,14 @@ export class SearchComponent implements OnInit {
   }
 
   select(course) {
-    console.log(course)
     this.timetableService.select(course).subscribe(
-      res => console.log(res),
+      res => this.authService.user.courses.push(course),
       err => console.log(err, 'err')
     )
+  }
+
+  hasCourse(course) {
+    return this.authService.user.courses.some(c => (<any>c).id === course.id)
   }
 }
 

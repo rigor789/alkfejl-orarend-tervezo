@@ -30,6 +30,13 @@ public class TimetableService {
         this.userRepository.save(user);
     }
 
+    public void removeCourse(int id, Course course) {
+        User user = this.userRepository.findOne(id);
+        user.getCourses().remove(course);
+
+        this.userRepository.save(user);
+
+    }
     public boolean isLoggedIn() {
         return this.user != null;
     }

@@ -1,3 +1,5 @@
+import {Course} from "./Course";
+
 export class Role {
   static GUEST: String = 'GUEST';
   static USER: String = 'USER';
@@ -11,6 +13,7 @@ export class User {
   password: String;
   email: String;
   role: String;
+  courses: Array<Course> = [];
 
   constructor(username?: String, password?: String, email?: String, role?: String) {
     this.username = username || '';

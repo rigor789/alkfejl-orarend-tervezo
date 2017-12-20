@@ -22,8 +22,6 @@ export class AuthService {
           this.user[k] = res[k];
         })
 
-        ;(<any>global).user = this.user;
-
         return this.user;
       })
   }

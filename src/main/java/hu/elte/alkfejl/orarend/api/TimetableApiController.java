@@ -49,6 +49,17 @@ public class TimetableApiController {
         return ResponseEntity.badRequest().build();
     }
 
+    @PostMapping("/remove")
+    public ResponseEntity<Iterable<Course>> remove(@RequestBody RemoveBody selected) {
+        Course course = this.courseRepository.findOne(selected.getCourseId());
+
+        this.timetableService.removeCourse(selected.getUserId(), course);
+        User user = this.userService.getUserRepository().findOne(selected.getUserId());
+
+        return ResponseEntity.ok(user.getCourses());
+    }
+
+
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
@@ -56,5 +67,14 @@ public class TimetableApiController {
         private int userId;
         private String subCode;
         private int courseCode;
+    }
+
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    private static class RemoveBody {
+        private int userId;
+        private int courseId;
     }
 }

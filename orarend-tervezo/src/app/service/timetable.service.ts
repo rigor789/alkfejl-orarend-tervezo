@@ -20,4 +20,12 @@ export class TimetableService {
       .map(res => res.json())
   }
 
+  remove(course) {
+    const RemoveBody = {
+      userId: this.authService.user.id,
+      courseId: course.id,
+    }
+    return this.http.post(Server.getURLFor(Server.routes.REMOVE_COURSE), RemoveBody)
+      .map(res => res.json())
+  }
 }
