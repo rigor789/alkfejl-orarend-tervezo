@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
   });
+  error: String = '';
 
   constructor(private authService: AuthService, private router: Router) {
   }
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(new User(this.username.value, this.password.value))
       .subscribe(
         res => this.router.navigate(['/search']),
-        err => console.log(err))
+        err => this.error = 'Invalid login.')
   }
 
   get username(): AbstractControl {

@@ -17,11 +17,12 @@ export class SearchComponent implements OnInit {
   displayedColumns: String[] = [
     'name',
     'subCode',
-    // 'room',
-    // 'note',
-    // 'type',
+    'room',
+    'note',
+    'type',
     'courseCode',
-    // 'teacher'
+    'teacher',
+    'actions'
   ];
   dataSource: DataSource<Course> = new CourseDataSource(this.searchService, '');
   subjects = SUBJECTS;
@@ -49,6 +50,10 @@ export class SearchComponent implements OnInit {
 
   get filteredSubjects() {
     return this.subjects.filter(sub => sub.toLowerCase().indexOf(this.filter.toString().toLowerCase()) > -1);
+  }
+
+  select(course) {
+    console.log(course)
   }
 }
 

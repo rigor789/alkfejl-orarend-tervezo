@@ -2,21 +2,22 @@ package hu.elte.alkfejl.orarend.model;
 
 import hu.elte.alkfejl.orarend.service.schedule.Interval;
 import hu.elte.alkfejl.orarend.service.schedule.IntervalConverter;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name="COURSES")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 public class Course extends BaseEntity {
 
     @Column(nullable = false)
     private String name; //0
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String subCode; //1
 
     @Column(nullable = false)
@@ -29,7 +30,7 @@ public class Course extends BaseEntity {
     @Column(nullable = false)
     private String note; //5
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     @Enumerated(EnumType.STRING)
     private CourseType type; //6
 
@@ -38,28 +39,6 @@ public class Course extends BaseEntity {
 
     @Column(nullable = false)
     private String teacher; //11
-
-    public Course(String inp) {
-        String[] splt = inp.split("</td><td>");
-        this.name = splt[0];
-        this.subCode = splt[1];
-        this.interval = new Interval(splt[2]);
-        this.room = splt[3];
-        this.note = splt[5];
-
-        if(splt[6].equals("gyakorlat"))
-            type = CourseType.Practice;
-        else if(splt[6].equals("elõadás"))
-            type = CourseType.Presentation;
-        else if(splt[6].equals("konzultáció"))
-            type = CourseType.Consultation;
-        this.courseCode = Integer.parseInt(splt[7]);
-        if(splt.length == 11)
-            teacher = "UNKNOWN";
-        else
-            this.teacher = splt[11];
-
-    }
 
     boolean overlapsWith(Course other) {
         return interval.overlapsWith(other.getInterval());
@@ -80,7 +59,7 @@ public class Course extends BaseEntity {
     }
 
     public enum CourseType {
-        Practice, Presentation, Consultation;
+        Practice, Presentation, Consultation, Unknown;
 
         @Override
         public String toString() {

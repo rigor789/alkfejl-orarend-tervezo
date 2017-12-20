@@ -16,9 +16,7 @@ export class AuthService {
     return this.http.post(Server.getURLFor(Server.routes.LOGIN), user)
       .map(res => {
         this.isLoggedIn = true;
-        this.user = user; // todo use server response
-        this.user.role = Role.USER;
-        //this.user = res.json();
+        this.user = res.json();
         return this.user;
       })
   }
@@ -27,8 +25,7 @@ export class AuthService {
     return this.http.post(Server.getURLFor(Server.routes.REGISTER), user)
       .map(res => {
         this.isLoggedIn = true;
-        this.user = user; // todo use server response
-        //this.user = res.json();
+        this.user = res.json();
         return this.user;
       })
   }

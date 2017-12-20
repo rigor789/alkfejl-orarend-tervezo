@@ -1,6 +1,7 @@
 <!-- Valamiért nem úgy viselkedik mint a login page-->
 <div class="page-body" id="register-page">
   <h2 class="mat-h2">Register</h2>
+  <p style="color: red;" *ngIf="error.length">{{ error }}</p>
   <form [formGroup]="registerForm" novalidate>
     <div class="form-control">
       <mat-form-field>
@@ -25,6 +26,19 @@
         <input matInput placeholder="Username" formControlName="username">
         <mat-error *ngIf="username.hasError('required')">
           Username is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+
+    <div class="form-control">
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email">
+        <mat-error *ngIf="email.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="email.hasError('email')">
+          Email is <strong>invalid</strong>
         </mat-error>
       </mat-form-field>
     </div>
