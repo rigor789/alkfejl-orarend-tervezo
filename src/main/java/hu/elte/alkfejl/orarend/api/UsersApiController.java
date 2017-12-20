@@ -1,5 +1,6 @@
 package hu.elte.alkfejl.orarend.api;
 
+import hu.elte.alkfejl.orarend.annotation.Role;
 import hu.elte.alkfejl.orarend.model.User;
 import hu.elte.alkfejl.orarend.repository.UserRepository;
 import hu.elte.alkfejl.orarend.service.UserService;
@@ -23,30 +24,22 @@ public class UsersApiController {
         this.userRepository = userRepository;
     }
 
+    @Role({User.Role.ADMIN, User.Role.DEVELOPER})
     @GetMapping()
     public ResponseEntity<Iterable<User>> all() {
         return ResponseEntity.ok(userRepository.findAll());
 
-        /*
-        todo: figure out sessions / tokens
-        if (!this.userService.isLoggedIn()) {
-            return ResponseEntity.status(401).build();
-        }
-
-        User.Role role = this.userService.getUser().getRole();
-        if (role != User.Role.ADMIN || role != User.Role.DEVELOPER) {
-            return ResponseEntity.status(401).build();
-        }*/
-
     }
 
 
+    @Role({User.Role.ADMIN, User.Role.DEVELOPER})
     @GetMapping("/{id}")
     public ResponseEntity<User> findOne(@PathVariable int id) {
         return ResponseEntity.ok(userRepository.findOne(id));
     }
 
 
+    @Role({User.Role.ADMIN, User.Role.DEVELOPER})
     @PostMapping("/{id}")
     public ResponseEntity<User> save(@PathVariable int id, @RequestBody User user) {
         return ResponseEntity.ok(this.userService.update(id, user));

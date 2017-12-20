@@ -1,6 +1,8 @@
 package hu.elte.alkfejl.orarend.api;
 
+import hu.elte.alkfejl.orarend.annotation.Role;
 import hu.elte.alkfejl.orarend.model.Course;
+import hu.elte.alkfejl.orarend.model.User;
 import hu.elte.alkfejl.orarend.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +25,7 @@ public class SearchApiController {
         this.scheduleService = scheduleService;
     }
 
+    @Role({User.Role.USER, User.Role.ADMIN, User.Role.DEVELOPER})
     @GetMapping()
     public ResponseEntity<Iterable<Course>> search(
             @RequestParam(value = "filter") String filter,

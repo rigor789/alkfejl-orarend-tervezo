@@ -1,6 +1,7 @@
 package hu.elte.alkfejl.orarend.api;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import hu.elte.alkfejl.orarend.annotation.Role;
 import hu.elte.alkfejl.orarend.model.Course;
 import hu.elte.alkfejl.orarend.model.User;
 import hu.elte.alkfejl.orarend.repository.CourseRepository;
@@ -35,11 +36,10 @@ public class TimetableApiController {
         this.courseRepository = courseRepository;
     }
 
+    @Role({User.Role.USER, User.Role.ADMIN, User.Role.DEVELOPER})
     @PostMapping("/select")
     public ResponseEntity<Boolean> select(@RequestBody SelectBody selected) {
-        System.out.println(selected.getSubCode() + " --- " +  selected.getCourseCode());
         Optional<Course> optCourse = this.courseRepository.findBySubCodeAndCourseCode(selected.getSubCode(), selected.getCourseCode());
-        System.out.println(optCourse);
 
         if (optCourse.isPresent()) {
             this.timetableService.addCourse(selected.getUserId(), optCourse.get());
@@ -49,6 +49,7 @@ public class TimetableApiController {
         return ResponseEntity.badRequest().build();
     }
 
+    @Role({User.Role.USER, User.Role.ADMIN, User.Role.DEVELOPER})
     @PostMapping("/remove")
     public ResponseEntity<Iterable<Course>> remove(@RequestBody RemoveBody selected) {
         Course course = this.courseRepository.findOne(selected.getCourseId());

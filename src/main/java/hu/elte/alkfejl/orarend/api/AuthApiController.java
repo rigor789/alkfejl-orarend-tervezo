@@ -1,5 +1,6 @@
 package hu.elte.alkfejl.orarend.api;
 
+import hu.elte.alkfejl.orarend.annotation.Role;
 import hu.elte.alkfejl.orarend.service.UserService;
 import hu.elte.alkfejl.orarend.service.exceptions.InvalidUserException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +17,13 @@ import hu.elte.alkfejl.orarend.model.User;
 public class AuthApiController {
 
     private final UserService userService;
+
     @Autowired
     public AuthApiController(UserService userService) {
         this.userService = userService;
     }
 
+    @Role({User.Role.GUEST})
     @PostMapping("/login")
     public ResponseEntity<User> login(@RequestBody User user) {
         try {
@@ -30,11 +33,14 @@ public class AuthApiController {
         }
     }
 
+    @Role({User.Role.GUEST})
     @PostMapping("/register")
     public ResponseEntity<User> register(@RequestBody User user) {
         return ResponseEntity.ok(this.userService.register(user));
     }
 
+
+    @Role({User.Role.USER, User.Role.ADMIN, User.Role.DEVELOPER})
     @PostMapping("/logout")
     public ResponseEntity<Boolean> logout() {
         this.userService.setUser(new User());
